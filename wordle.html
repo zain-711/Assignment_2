@@ -10,7 +10,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        border-bottom: 1px solid;
+        border-bottom: 1px solid lightgrey;
       }
       .wordle {
         font-size: 32px;
@@ -20,6 +20,7 @@
       }
       .container {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
       }
@@ -32,6 +33,44 @@
       }
       .box {
         border: 2px solid lightgray;
+      }
+      .keyboard {
+        margin: 10px;
+      }
+      .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+      .button {
+        font-size: 1.25em;
+        font-weight: bold;
+        width: 45px;
+        height: 58px;
+        margin: 5px;
+        border: 0;
+        border-radius: 4px;
+        background-color: lightgray;
+      }
+      .button_enter {
+        font-size: 1.25em;
+        font-weight: bold;
+        width: 100px;
+        height: 58px;
+        margin: 5px;
+        border: 0;
+        border-radius: 4px;
+        background-color: lightgray;
+      }
+      .button_backspace {
+        font-size: 1.25em;
+        font-weight: bold;
+        width: 135px;
+        height: 58px;
+        margin: 5px;
+        border: 0;
+        border-radius: 4px;
+        background-color: lightgray;
       }
     </style>
   </head>
@@ -77,6 +116,42 @@
         <div class="box"></div>
         <div class="box"></div>
         <div class="box"></div>
+      </div>
+      <div class="keyboard">
+        <div class="row">
+          <button class="button">Q</button>
+          <button class="button">W</button>
+          <button class="button">E</button>
+          <button class="button">R</button>
+          <button class="button">T</button>
+          <button class="button">Y</button>
+          <button class="button">U</button>
+          <button class="button">I</button>
+          <button class="button">O</button>
+          <button class="button">P</button>
+        </div>
+        <div class="row">
+          <button class="button">A</button>
+          <button class="button">S</button>
+          <button class="button">D</button>
+          <button class="button">F</button>
+          <button class="button">G</button>
+          <button class="button">H</button>
+          <button class="button">J</button>
+          <button class="button">K</button>
+          <button class="button">L</button>
+        </div>
+        <div class="row">
+          <button class="button_enter">ENTER</button>
+          <button class="button">Z</button>
+          <button class="button">X</button>
+          <button class="button">C</button>
+          <button class="button">V</button>
+          <button class="button">B</button>
+          <button class="button">N</button>
+          <button class="button">M</button>
+          <button class="button_backspace">BACKSPACE</button>
+        </div>
       </div>
     </div>
   </body>
