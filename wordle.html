@@ -7,16 +7,26 @@
     <title>Document</title>
     <style>
       .header {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        display: block;
+        position: relative;
         border-bottom: 1px solid lightgrey;
       }
       .wordle {
+        text-align: center;
         font-size: 32px;
         letter-spacing: 0.01em;
         font-weight: bold;
         margin-bottom: 1%;
+      }
+      #three_lines {
+        float: left;
+        position: absolute;
+        left: 0;
+      }
+      #group {
+        float: right;
+        position: absolute;
+        right: 0;
       }
       .container {
         display: flex;
@@ -35,22 +45,28 @@
         border: 2px solid lightgray;
       }
       .keyboard {
+        display: flex;
+        flex-direction: column;
         margin: 10px;
+        width: 100%;
       }
       .row {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        width: 100%;
       }
       .button {
         font-size: 1.25em;
         font-weight: bold;
-        width: 45px;
+        max-width: 40px;
+        flex: 1;
         height: 58px;
         margin: 5px;
         border: 0;
         border-radius: 4px;
         background-color: lightgray;
+        text-transform: capitalize;
       }
       .button_enter {
         font-size: 0.75em;
@@ -61,6 +77,7 @@
         border: 0;
         border-radius: 4px;
         background-color: lightgray;
+        text-transform: capitalize;
       }
       .button_backspace {
         width: 65px;
@@ -74,13 +91,13 @@
   </head>
   <body>
     <div class="header">
-      <img src="three_lines.png" width="40" height="34" />
-      <div class="wordle">Wordle</div>
-      <div>
+      <img id="three_lines" src="three_lines.png" width="40" height="34" />
+      <div id="group">
         <img src="question.PNG" width="34" height="34" />
         <img src="stats.PNG" width="34" height="34" />
         <img src="settings.PNG" width="34" height="34" />
       </div>
+      <div class="wordle">Wordle</div>
     </div>
     <div class="container">
       <div class="gameboard">
@@ -117,37 +134,37 @@
       </div>
       <div class="keyboard">
         <div class="row">
-          <button class="button">Q</button>
-          <button class="button">W</button>
-          <button class="button">E</button>
-          <button class="button">R</button>
-          <button class="button">T</button>
-          <button class="button">Y</button>
-          <button class="button">U</button>
-          <button class="button">I</button>
-          <button class="button">O</button>
-          <button class="button">P</button>
+          <button class="button">q</button>
+          <button class="button">w</button>
+          <button class="button">e</button>
+          <button class="button">r</button>
+          <button class="button">t</button>
+          <button class="button">y</button>
+          <button class="button">u</button>
+          <button class="button">i</button>
+          <button class="button">o</button>
+          <button class="button">p</button>
         </div>
         <div class="row">
-          <button class="button">A</button>
-          <button class="button">S</button>
-          <button class="button">D</button>
-          <button class="button">F</button>
-          <button class="button">G</button>
-          <button class="button">H</button>
-          <button class="button">J</button>
-          <button class="button">K</button>
-          <button class="button">L</button>
+          <button class="button">a</button>
+          <button class="button">s</button>
+          <button class="button">d</button>
+          <button class="button">f</button>
+          <button class="button">g</button>
+          <button class="button">h</button>
+          <button class="button">j</button>
+          <button class="button">k</button>
+          <button class="button">l</button>
         </div>
         <div class="row">
-          <button class="button_enter">ENTER</button>
-          <button class="button">Z</button>
-          <button class="button">X</button>
-          <button class="button">C</button>
-          <button class="button">V</button>
-          <button class="button">B</button>
-          <button class="button">N</button>
-          <button class="button">M</button>
+          <button class="button_enter">enter</button>
+          <button class="button">z</button>
+          <button class="button">x</button>
+          <button class="button">c</button>
+          <button class="button">v</button>
+          <button class="button">b</button>
+          <button class="button">n</button>
+          <button class="button">m</button>
           <button class="button_backspace"><img src="backspace.PNG" /></button>
         </div>
       </div>
